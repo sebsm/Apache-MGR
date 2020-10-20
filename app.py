@@ -19,4 +19,17 @@ def main():
         numCs = logData.filter(logData.value.contains('c')).count()
         print("Lines with a: %i, lines with b: %i, lines with c: %i" % (numAs, numBs, numCs))
 
+        df = sc.parallelize([1,2,3,4,5])
+        df_all = df.collect()
+        print("Number of partitions: " + str(df.getNumPartitions()))
+        print("Action: First element: " + str(df.first()))
+        print(df_all)
+
+        empty_1 = spark.sparkContext.emptyRDD()
+        empty_2 = df = spark.sparkContext.parallelize([])
+
+        print(""+str(empty_1.isEmpty()))
         spark.stop()
+
+if __name__ == '__main__':
+        main()

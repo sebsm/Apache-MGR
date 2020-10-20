@@ -1,0 +1,1 @@
+spark-submit --master spark://192.168.1.2:7077 App.py 1000
