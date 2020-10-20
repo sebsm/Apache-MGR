@@ -1,4 +1,4 @@
-from pyspark.sql import SparkSession
+from pyspark.sql import SparkSession, SparkConf
 
 install_requires=[
         'pyspark=={site.SPARK_VERSION}'
