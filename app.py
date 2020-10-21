@@ -12,6 +12,9 @@ def init_spark():
         logData = spark.read.text(logFile).cache()
         return spark, sc, logData
 
+
+
+
 def main():
         spark, sc, logData = init_spark()
         numAs = logData.filter(logData.value.contains('a')).count()
@@ -30,6 +33,12 @@ def main():
 
         print(""+str(empty_1.isEmpty()))
         spark.stop()
+
+
+
+
+
+
 
 if __name__ == '__main__':
         main()
