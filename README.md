@@ -1,4 +1,4 @@
-# Apache-MGR
+# Spark/Hadoop
 
 Repozytorium dla wszystkich testów/plików na potrzeby pracy MGR.
 
