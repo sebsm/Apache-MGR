@@ -6,7 +6,7 @@ install_requires=[
 
 
 def init_spark():
-        logFile = "README.md"  # Should be some file on your system
+        logFile = "README.md"  # Plik
         spark = SparkSession.builder.appName("SimpleApp").getOrCreate()
         sc = spark.sparkContext
         logData = spark.read.text(logFile).cache()
@@ -33,12 +33,6 @@ def main():
 
         print(""+str(empty_1.isEmpty()))
         spark.stop()
-
-
-
-
-
-
 
 if __name__ == '__main__':
         main()
